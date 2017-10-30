@@ -5,5 +5,3 @@ def process_user_query(query_string):
     for x in result:
         y.append('hi ' + x )
     return y
-
-print (process_user_query('Leo marco mario'))
