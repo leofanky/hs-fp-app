@@ -3,5 +3,8 @@ def process_user_query(query_string):
     result = []
     result = query_string.split()
     for x in result:
-        y.append('hi ' + x )
+        if x[0].isupper():
+            y.append('hi ' + x )
     return y
+
+print (process_user_query('Leo went to a party with Mario'))
