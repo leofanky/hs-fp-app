@@ -1,5 +1,9 @@
-
 def process_user_query(query_string):
-    x = query_string.spit(' ')
-    result = ('Hello, {x}!')
-    return result
+    y = []
+    result = []
+    result = query_string.split()
+    for x in result:
+        y.append('hi ' + x )
+    return y
+
+print (process_user_query('Leo marco mario'))
