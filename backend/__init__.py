@@ -1,4 +1,5 @@
 
 def process_user_query(query_string):
-    result = ('Hello, there!')
+    x = query_string.spit(' ')
+    result = ('Hello, {x}!')
     return result
