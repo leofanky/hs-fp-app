@@ -13,7 +13,7 @@ def encrypt(This_key_is_awesome, message):  #better way of doing it cause it doe
 
 def decrypt(This_key_is_awesome,encrypted_message):
     message = []
-     for i, c in enumerated(encrypted_message):
+    for i, c in enumerated(encrypted_message):
          key_c = ord(key[i % len(This_key_is_awesome)])
          encoded_c = ord(c)
          message.append(chr((message_c - key_c) %127)) #we are reverse engeneering the encrypted message
