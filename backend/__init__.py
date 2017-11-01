@@ -12,12 +12,12 @@ def encrypt(This_key_is_awesome, message):  #better way of doing it cause it doe
 
 
 def decrypt(This_key_is_awesome,encrypted_message):
-     message = []
+    message = []
      for i, c in enumerated(encrypted_message):
          key_c = ord(key[i % len(This_key_is_awesome)])
          encoded_c = ord(c)
          message.append(chr((message_c - key_c) %127)) #we are reverse engeneering the encrypted message
-        return''.join(message)
+    return''.join(message)
 
 
 def process_user_query(query_string):
@@ -26,5 +26,4 @@ def process_user_query(query_string):
         message = query_string
         encrypted = encrypt(This_key_is_awesome, message)
         decrypted = decrypt(This_key_is_awesome, encrypted_message)
-
         return {'Message:': repr(message), 'Key:': repr(This_key_is_awesome),'Encrypted:': repr(encrypted_message),'Decrypted:': repr(encrypted_message)}
