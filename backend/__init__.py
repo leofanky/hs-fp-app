@@ -1,4 +1,3 @@
-
 def encrypt(This_key_is_awesome, message):  #better way of doing it cause it doesn't repeat
     encrypted_message = []
     for i, c in enumarate(message): #assaning a number for every character
@@ -21,9 +20,8 @@ def decrypt(This_key_is_awesome,encrypted_message):
 
 
 def process_user_query(query_string):
-    if __name__ == '__main__':  #so we can run it as a module the hole thing
-        This_key_is_awesome = 'This_is_my_awsome_secret_key'
-        message = query_string
-        encrypted = encrypt(This_key_is_awesome, message)
-        decrypted = decrypt(This_key_is_awesome, encrypted_message)
-        return {'Message:': repr(message), 'Key:': repr(This_key_is_awesome),'Encrypted:': repr(encrypted_message),'Decrypted:': repr(encrypted_message)}
+    This_key_is_awesome = 'This_is_my_awsome_secret_key'
+    message = query_string
+    encrypted = encrypt(This_key_is_awesome, message)
+    decrypted = decrypt(This_key_is_awesome, encrypted_message)
+    return {'Message:': repr(message), 'Key:': repr(This_key_is_awesome),'Encrypted:': repr(encrypted_message),'Decrypted:': repr(encrypted_message)}
