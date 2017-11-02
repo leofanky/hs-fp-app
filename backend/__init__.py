@@ -25,9 +25,10 @@ def process_user_query(query_string):
     q = query_string.splitlines()
     if q[0] == 'encrypt':
         return encrypt(q[1],q[2])
-    else:
+    elif q[0]== 'decrypt':
         return decrypt(q[1],q[2])
-
+    else:
+        return 'nice try bitch'
 
 
 #comand encrypt or  decrypt
